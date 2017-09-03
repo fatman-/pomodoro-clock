@@ -3,6 +3,8 @@
 ### Running `pomodoro-clock` locally
 
 ```
+$ git clone git@github.com:fatman-/pomodoro-clock.git
+$ cd pomodoro-clock
 $ npm install
 $ npm run serve
 ```
