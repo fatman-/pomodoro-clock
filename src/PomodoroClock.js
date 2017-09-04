@@ -7,7 +7,7 @@ class PomodoroClock { // eslint-disable-line no-unused-vars
 	) {
 		this.sessionLengthInSeconds = parseFloat(sessionLengthInMinutes) * 60;
 		this.breakLengthInSeconds = parseFloat(breakLengthInMinutes) * 60;
-		this.noOfSessions = parseFloat(noOfSessions);
+		this.noOfSessions = parseInt(noOfSessions);
 
 		this.initialState = {
 			pomodoroInProgress: false,
