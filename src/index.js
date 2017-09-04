@@ -15,8 +15,8 @@ const createClock = () => {
 		noOfSessions,
 		(state, clockInfo) => {
 			const progressType = state.pomodoroInProgress ? 'Pomodoro' : 'Break';
-			const allSessionsCompleted = !state.pomodoroInProgress && !state.breakInProgress;
-			document.getElementById('pomodoro-clock').innerHTML =
+			const allSessionsCompleted = state.elapsedSessions === clockInfo.noOfSessions;
+			document.getElementById('timer').innerHTML =
 				`Clock (${allSessionsCompleted ? 'Finished' : progressType}): ${state.elapsedProgressInSeconds} Finished Sessions: ${state.elapsedSessions}/${clockInfo.noOfSessions}`;
 		}
 	);
@@ -24,6 +24,7 @@ const createClock = () => {
 
 const startControl = () => {
 	clock = createClock();
+	showClock();
 	clock.startSession();
 };
 
@@ -40,8 +41,37 @@ const pauseControl = () => {
 const resetControl = () => {
 	clock.reset();
 	clock = null;
+	hideClock();
 };
 
-document.getElementById('start-button').addEventListener('click', startControl);
-document.getElementById('pause-button').addEventListener('click', pauseControl);
-document.getElementById('reset-button').addEventListener('click', resetControl);
+const addEventListeners = () => {
+	document.getElementById('start-button').addEventListener('click', startControl);
+	document.getElementById('pause-button').addEventListener('click', pauseControl);
+	document.getElementById('reset-button').addEventListener('click', resetControl);
+};
+
+const hideClock = () => {
+	document.getElementById('pomodoro-clock').style.display = 'none';
+	document.getElementById('pause-button').disabled = true;
+	document.getElementById('reset-button').disabled = true;
+
+	document.getElementById('input-controls').style.display = 'block';
+	document.getElementById('start-button').disabled = false;
+	document.getElementById('sessions').disabled = false;
+	document.getElementById('minutes-per-pomodoro').disabled = false;
+	document.getElementById('minutes-per-break').disabled = false;
+};
+
+const showClock = () => {
+	document.getElementById('pomodoro-clock').style.display = 'block';
+	document.getElementById('pause-button').disabled = false;
+	document.getElementById('reset-button').disabled = false;
+
+	document.getElementById('input-controls').style.display = 'none';
+	document.getElementById('start-button').disabled = true;
+	document.getElementById('sessions').disabled = true;
+	document.getElementById('minutes-per-pomodoro').disabled = true;
+	document.getElementById('minutes-per-break').disabled = true;
+};
+
+addEventListeners();
