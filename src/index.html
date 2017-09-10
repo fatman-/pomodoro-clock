@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<title>Pomodoro Clock</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	</head>
+<head>
+	<title>Pomodoro Clock</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+	<link rel="stylesheet" href="master.css">
+</head>
 
-	<body>
-		<div id="input-controls">
-			<input id="sessions" type="number" placeholder="No. of sessions"/>
-			<input id="minutes-per-pomodoro" type="number" placeholder="No. of minutes per pomodoro"/>
-			<input id="minutes-per-break" type="number" placeholder="No. of minutes per break"/>
-			<button id="start-button">Start</button>
-		</div>
-		<div id="pomodoro-clock" style="display: none;">
-			<div id="timer">
+<body>
+	<h1 class="text-center">Pomodoro Clock</h1>
+	<div id="input-controls" class="conatiner">
+		<div class="columns">
+			<div class="column col-sm-12 col-3 col-mx-auto text-center">
+				<input id="minutes-per-pomodoro" type="number">
+				<label class="form-label">No of minutes per session</label>
 			</div>
-			<div id="controls">
-				<button id="pause-button">Pause</button>
-				<button id="reset-button">Reset</button>
+			<div class="column col-sm-12 col-3 col-mx-auto text-center">
+				<input id="minutes-per-break" type="number">
+				<label class="form-label">No. of minutes per break</label>
 			</div>
 		</div>
-		<script src="PomodoroClock.js"></script>
-		<script src="index.js"></script>
-	</body>
+		<br><br><br>
+		<div class="coloumns">
+			<div class="column col-sm-12 col-3 col-mx-auto text-center">
+				<input id="sessions" type="number">
+				<label class="form-label">Number of Sessions</label>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="text-center button-area">
+				<button id="start-button" class="btn start-btn text-success">Start</button>
+			</div>
+		</div>
+	</div>
+	<div id="pomodoro-clock" style="display: none;">
+		<div id="timer">
+		</div>
+		<div id="controls">
+			<button id="pause-button">Pause</button>
+			<button id="reset-button">Reset</button>
+		</div>
+	</div>
+	<script src="PomodoroClock.js"></script>
+	<script src="index.js"></script>
+</body>
+
 </html>
