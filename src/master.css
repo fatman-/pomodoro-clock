@@ -1,0 +1,22 @@
+input[type=number] {
+		border: none;
+		border-bottom: 1px solid;
+		font-size: 18px;
+		width: 100%;
+}
+
+#input-controls {
+		padding: 10px;
+}
+
+h1 {
+		padding: 10px;
+}
+
+.button-area {
+		padding: 20px;
+}
+
+.start-btn {
+		border-color: #32b643
+}
