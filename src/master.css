@@ -1,8 +1,9 @@
 input[type=number] {
 		border: none;
-		border-bottom: 1px solid;
-		font-size: 18px;
+		border-bottom: 1px solid #e85600;
+		font-size: 40px;
 		width: 100%;
+		outline: none !important;
 }
 
 #input-controls {
@@ -17,6 +18,15 @@ h1 {
 		padding: 20px;
 }
 
-.start-btn {
-		border-color: #32b643
+.btn.start-btn {
+		border-color: #32b643;
+		font-size: 32px;
+		border-radius: 10px;
+		height: 4rem;
+		padding: 1.2rem 1.2rem;
+		margin: 30px;
+}
+
+.pomodoro-input {
+		margin: 130px;
 }

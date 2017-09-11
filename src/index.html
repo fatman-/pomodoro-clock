@@ -13,11 +13,11 @@
 
 <body>
 	<h1 class="text-center">Pomodoro Clock</h1>
-	<div id="input-controls" class="conatiner">
+	<div id="input-controls" class="conatiner pomodoro-input">
 		<div class="columns">
 			<div class="column col-sm-12 col-3 col-mx-auto text-center">
 				<input id="minutes-per-pomodoro" type="number">
-				<label class="form-label">No of minutes per session</label>
+				<label class="form-label">No. of minutes per session</label>
 			</div>
 			<div class="column col-sm-12 col-3 col-mx-auto text-center">
 				<input id="minutes-per-break" type="number">
@@ -42,8 +42,8 @@
 		<div id="timer">
 		</div>
 		<div id="controls">
-			<button id="pause-button">Pause</button>
-			<button id="reset-button">Reset</button>
+			<button id="pause-button" class="btn pause-btn">Pause</button>
+			<button id="reset-button" class="btn reset-btn">Reset</button>
 		</div>
 	</div>
 	<script src="PomodoroClock.js"></script>
