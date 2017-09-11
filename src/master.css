@@ -27,6 +27,13 @@ h1 {
 		margin: 30px;
 }
 
+.btn.start-btn:hover {
+		border-color: #32b643;
+		background-color: #32b643;
+		color: #ffffff;
+		cursor: pointer;
+}
+
 .btn.pause-btn {
 		border-color: #ffb700;
 		font-size: 32px;
@@ -34,6 +41,13 @@ h1 {
 		height: 4rem;
 		padding: 1.2rem 1.2rem;
 		margin: 30px;
+}
+
+.btn.pause-btn:hover {
+		border-color: #ffb700;
+		background-color: #ffb700;
+		color: #ffffff;
+		cursor: pointer;
 }
 
 .btn.reset-btn {
@@ -44,6 +58,13 @@ h1 {
 		padding: 1.2rem 1.2rem;
 		margin: 30px;
 		color: #e85600;
+}
+
+.btn.reset-btn:hover {
+		border-color: #e85600;
+		background-color: #e85600;
+		color: #ffffff;
+		cursor: pointer;
 }
 
 .pomodoro-input {
