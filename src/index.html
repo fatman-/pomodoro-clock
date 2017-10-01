@@ -39,7 +39,30 @@
 		</div>
 	</div>
 	<div id="pomodoro-clock" style="display: none;">
-		<div id="timer">
+		<div class="state">
+			<h2 id="progressType"> Session Type</h2>
+		</div>
+		<div class="columns">
+			<div class="column col-sm-12 col-3 col-mx-auto text-center">
+				<div class="output" id="minutes" type="number"> 1</div>
+				<label class="form-label">Minutes</label>
+			</div>
+			<br>
+			<div class="column col-sm-12 col-3 col-mx-auto text-center">
+				<div class="output" id="seconds" type="number"> 2</div>
+				<label class="form-label">Seconds</label>
+			</div>
+			<div class="column col-sm-12 col-3 col-mx-auto text-center">
+				<div class="output" id="milliSeconds" type="number"> 3</div>
+				<label class="form-label">Milli-Seconds</label>
+			</div>
+		</div>
+		<br><br><br>
+		<div class="columns">
+			<div class=" coloumn col-3 col-mx-auto text-center">
+				<div id="completed-sessions"> 4</div>
+				<label class="form-label">Sessions</label>
+			</div>
 		</div>
 		<div id="controls" class="text-center button-area">
 			<button id="pause-button" class="btn pause-btn text-warning">Pause</button>
