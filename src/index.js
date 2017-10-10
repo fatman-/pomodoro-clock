@@ -16,8 +16,15 @@ const createClock = () => {
 		(state, clockInfo) => {
 			const progressType = state.pomodoroInProgress ? 'Pomodoro' : 'Break';
 			const allSessionsCompleted = state.elapsedSessions === clockInfo.noOfSessions;
-			document.getElementById('timer').innerHTML =
-				`Clock (${allSessionsCompleted ? 'Finished' : progressType}): ${state.elapsedProgressInSeconds} Finished Sessions: ${state.elapsedSessions}/${clockInfo.noOfSessions}`;
+			var time = parseFloat(state.elapsedProgressInSeconds);
+			var m = Math.floor(time % 3600 / 60);
+			var s = Math.floor(time % 3600 % 60);
+			var milli = (time % 1).toFixed(3).substring(2);
+			document.getElementById('progressType').innerHTML = `Clock (${allSessionsCompleted ? 'Finished' : progressType})`;
+			document.getElementById('minutes').innerHTML = m;
+			document.getElementById('seconds').innerHTML = s;
+			document.getElementById('milliSeconds').innerHTML = milli;
+			document.getElementById('completed-sessions').innerHTML = `${state.elapsedSessions}/${clockInfo.noOfSessions}`;
 		}
 	);
 };
